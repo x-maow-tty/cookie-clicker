@@ -1,0 +1,27 @@
+{
+  "name": "cookie-clicker",
+  "version": "1.0.0",
+  "description": "A cross-platform desktop client for Cookie Clicker 🍪",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vsk-1/cookie-clicker.git"
+  },
+  "author": "Aidan Levy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vsk-1/cookie-clicker/issues"
+  },
+  "homepage": "https://github.com/vsk-1/cookie-clicker#readme",
+  "devDependencies": {
+    "electron": "^21.0.1"
+  },
+  "dependencies": {
+    "@cliqz/adblocker-electron": "^1.25.1",
+    "discord-rich-presence": "^0.0.8",
+    "fs": "^0.0.1-security"
+  }
+}
