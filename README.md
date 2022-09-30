@@ -11,3 +11,7 @@ just play the [Steam version,](https://store.steampowered.com/app/1454400/Cookie
 
 ## Installation
 idfk, figure it out lol
+
+## To-Do
+- Polish tray icon
+- (Maybe) improve save system
