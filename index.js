@@ -30,6 +30,7 @@ app.on('web-contents-created', (_event, contents) => {
 app.whenReady().then(() => {
     ipcMain.on('update-game-state', (_event, gameState) => {
         updateRichPresence(gameState);
+        updateTray(gameState.cookies);
     });
     ipcMain.on('game-ready', () => console.log('Game is ready!'));
 
@@ -68,7 +69,7 @@ const createTrayIcon = (win) => {
         { label: 'Quit', type: 'normal', click: () => win.destroy() }
     ]);
 
-    const tray = new Tray('icon.png');
+    const tray = new Tray(relative('icon.png'));
     tray.setContextMenu(menu);    
     return tray;
 };
@@ -89,6 +90,12 @@ const updateRichPresence = (gameState) => {
         instance: false
     });
 };
+
+const updateTray = (cookies) => {
+    if (tray) {
+        tray.setToolTip(`${commas(cookies)} cookies`);
+    }
+}
 
 // Credit to Orteil - I am a lazy asshole (Also it's more accurate to use the game's logic anyways but whatever)
 const notations = ['k','M','B','T','Qa','Qi','Sx','Sp','Oc','No'];

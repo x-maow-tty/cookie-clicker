@@ -10,7 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 window.desktop.updateGameState({
                     bakeryName: Game.bakeryName,
                     cookiesPerSecond: Game.cookiesPs,
-                    prestigeLevel: Game.prestige
+                    prestigeLevel: Game.prestige,
+                    cookies: Game.cookies
                 });
             }
         }, 10000);
